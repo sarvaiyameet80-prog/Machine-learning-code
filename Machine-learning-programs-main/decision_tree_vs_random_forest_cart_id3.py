@@ -4,7 +4,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-data = pd.read_csv("D:\Hardik\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\pima-indians-diabetes.csv")
+data = pd.read_csv("D:\meet\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\pima-indians-diabetes.csv")
 
 X = data.iloc[:, :-1]
 y = data.iloc[:, -1]
@@ -13,7 +13,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-#DECISION TREE USING GINI
+
 
 dt_gini = DecisionTreeClassifier(criterion="gini", random_state=42)
 
@@ -28,7 +28,7 @@ print("\nConfusion Matrix:", confusion_matrix(y_test, y_pred_gini))
 print("\nClassification Report:", classification_report(y_test, y_pred_gini))
 
 
-#DECISION TREE USING ID3 (ENTROPY)
+
 
 dt_entropy = DecisionTreeClassifier(criterion="entropy", random_state=42)
 
@@ -42,7 +42,7 @@ print("\nConfusion Matrix:", confusion_matrix(y_test, y_pred_entropy))
 print("\nClassification Report:", classification_report(y_test, y_pred_entropy))
 
 
-#RANDOM FOREST CLASSIFIER
+
 
 rf = RandomForestClassifier(n_estimators=100, random_state=42)
 
