@@ -4,7 +4,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-data = pd.read_csv("D:\Hardik\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\pima-indians-diabetes.csv")
+data = pd.read_csv("D:\meet\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\pima-indians-diabetes.csv")
 
 X = data.iloc[:, :-1]
 y = data.iloc[:, -1]
