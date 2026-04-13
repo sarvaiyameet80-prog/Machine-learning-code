@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestClassifier
 
-df = pd.read_csv(r"D:\Hardik\auto-mpg.csv")
+df = pd.read_csv(r"D:\meet\auto-mpg.csv")
 print(df)
 feat_labels = df.columns[1:]
 
