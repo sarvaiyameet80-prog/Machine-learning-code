@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 
 
-auto_mpg = pd.read_csv(r"D:\Hardik\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\auto-mpg.csv")
+auto_mpg = pd.read_csv(r"D:\meet\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\auto-mpg.csv")
 
 auto1=auto_mpg.drop('car name', axis=1)
 
