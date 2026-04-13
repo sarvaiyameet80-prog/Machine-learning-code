@@ -20,7 +20,7 @@ X.isnull().sum()
 
 X[:5]
 
-#Train_test_split
+
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
 
 scaler = StandardScaler()
@@ -33,11 +33,11 @@ y_pred = model.predict(X_test_scaled)
 acc = accuracy_score(y_test, y_pred)
 print("Test Accuracy:", acc)
 
-#pipline
+
 pipepline=Pipeline([('scaler',StandardScaler()),('svm',SVC())])
 
 
-#LINEAR KERNEL
+
 
 param_grid_linear = {
     'svm__kernel': ['linear'],
@@ -57,7 +57,7 @@ print("LINEAR Kernel Best Params:", grid_linear.best_params_)
 print("LINEAR Kernel Accuracy:", grid_linear.best_score_)
 
 
-#POLYNOMIAL KERNEL
+
 
 param_grid_poly = {
     'svm__kernel': ['poly'],
@@ -78,7 +78,7 @@ print("POLY Kernel Best Params:", grid_poly.best_params_)
 print("POLY Kernel Accuracy:", grid_poly.best_score_)
 
 
-#RBFKERNEL
+
 
 param_grid_rbf = {
     'svm__kernel': ['rbf'],
@@ -98,7 +98,7 @@ print('RBF Kernel BEst Params:',grid_rbf.best_params_)
 print('RBF Kernel Accuracy:',grid_rbf.best_score_)
 
 
-#SIGMOID KERNEL
+
 
 param_grid_sigmoid = {
     'svm__kernel': ['sigmoid'],
@@ -119,7 +119,7 @@ print('SIGMOID Kernel BEst Params:',grid_sigmoid.best_params_)
 print('SIGMOID Kernel Accuracy:',grid_sigmoid.best_score_)
 
 
-#CV=10 KERNEL
+
 
 param_grid_linear = {
     'svm__kernel': ['linear'],
@@ -139,7 +139,7 @@ print("LINEAR Kernel Best Params:", grid_linear.best_params_)
 print("LINEAR Kernel Accuracy:", grid_linear.best_score_)
 
 
-#POLYNOMIAL KERNEL CV=10
+
 
 param_grid_poly = {
     'svm__kernel': ['poly'],
@@ -160,7 +160,7 @@ print("POLY Kernel Best Params:", grid_poly.best_params_)
 print("POLY Kernel Accuracy:", grid_poly.best_score_)
 
 
-#RBF KERNEL CV=10
+
 
 param_grid_rbf = {
     'svm__kernel': ['rbf'],
@@ -180,7 +180,7 @@ print('RBF Ki BEst Params:',grid_rbf.best_params_)
 print('RBF Kernel Accuracy:',grid_rbf.best_score_)
 
 
-#SIGMOID KERNEL CV=10
+
 
 param_grid_sigmoid = {
     'svm__kernel': ['sigmoid'],
@@ -200,8 +200,6 @@ grid_sigmoid.fit(X_train, y_train)
 print('SIGMOID Kernel BEst Params:',grid_sigmoid.best_params_)
 print('SIGMOID Kernel Accuracy:',grid_sigmoid.best_score_)
 
-
-#KNN USIN GRID SEARCH
 
 from sklearn.neighbors import KNeighborsClassifier
 
