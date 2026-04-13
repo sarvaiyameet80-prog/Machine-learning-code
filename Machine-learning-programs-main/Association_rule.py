@@ -30,7 +30,7 @@ print(frequent_itemsets.sort_values(by="support", ascending=False))
 
 rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.6)
 
-# Add sorting (IMPORTANT)
+
 rules = rules.sort_values(by="lift", ascending=False)
 
 print("\nAssociation Rules:\n")
