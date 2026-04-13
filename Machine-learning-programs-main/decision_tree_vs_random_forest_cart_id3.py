@@ -13,7 +13,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-#DECISION TREE USING GINI
+
 
 dt_gini = DecisionTreeClassifier(criterion="gini", random_state=42)
 
@@ -28,7 +28,7 @@ print("\nConfusion Matrix:", confusion_matrix(y_test, y_pred_gini))
 print("\nClassification Report:", classification_report(y_test, y_pred_gini))
 
 
-#DECISION TREE USING ID3 (ENTROPY)
+
 
 dt_entropy = DecisionTreeClassifier(criterion="entropy", random_state=42)
 
@@ -42,7 +42,7 @@ print("\nConfusion Matrix:", confusion_matrix(y_test, y_pred_entropy))
 print("\nClassification Report:", classification_report(y_test, y_pred_entropy))
 
 
-#RANDOM FOREST CLASSIFIER
+
 
 rf = RandomForestClassifier(n_estimators=100, random_state=42)
 
