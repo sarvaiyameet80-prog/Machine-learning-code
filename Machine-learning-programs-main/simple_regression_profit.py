@@ -15,7 +15,7 @@ print(y)
 
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 0)
 
-# Creating and fitting the model
+
 model = LinearRegression()
 model.fit(X_train,y_train)
 
@@ -30,14 +30,14 @@ y_pred_train = model.predict(X_train)
 
 print("predicted salary is :", y_pred)
 
-#model evaluation
+
 
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error:', metrics.mean_squared_error(y_test,y_pred))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test,y_pred)))
 print('R2 score: ', metrics.r2_score(y_test, y_pred))
 
-# Plotting results
+
 plt.scatter(X_train, y_train, color = 'lightcoral')
 plt.plot(X_train, y_pred_train, color = 'firebrick')
 plt.title('Population vs Profit')
