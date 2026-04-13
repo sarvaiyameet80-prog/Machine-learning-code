@@ -9,7 +9,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
 from sklearn.svm import SVC
 
-df=pd.read_csv("D:\Hardik\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\titanic.csv")
+df=pd.read_csv("D:\meet\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\titanic.csv")
 df.head()
 
 #dropping irrelevant columns
