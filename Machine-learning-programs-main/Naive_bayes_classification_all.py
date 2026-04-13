@@ -21,7 +21,7 @@ print("Traing samples:",X_train.shape[0])
 print("testing samples:,",X_test.shape[0])
 
 
-#GAUSSIAN NAIVE BAYES
+
 
 gnb = GaussianNB()
 gnb.fit(X_train, y_train)
@@ -29,7 +29,7 @@ y_pred_gnb = gnb.predict(X_test)
 print("GaussianNb Accuracy:", accuracy_score(y_test, y_pred_gnb))
 
 
-#MULTINOMIAL NAIVE BAYES
+
 
 scaler = MinMaxScaler()
 X_train_scaled = scaler.fit_transform(X_train)
@@ -41,7 +41,7 @@ y_pred_mnb = mnb.predict(X_test_scaled)
 print("MultinomialNB Accuraccy:", accuracy_score(y_test, y_pred_mnb))
 
 
-#BERNOULLI NAIVE BAYES
+
 
 binarizer = Binarizer(threshold=0.0)
 X_train_binary = binarizer.fit_transform(X_train)
@@ -53,7 +53,7 @@ y_pred_bnb = bnb.predict(X_test_binary)
 print("BernoulliNB Acuracy:", accuracy_score(y_test, y_pred_bnb))
 
 
-#COMPLEMENT NAIVE BAYES
+
 
 cnb = ComplementNB()
 cnb.fit(X_train_scaled, y_train)
