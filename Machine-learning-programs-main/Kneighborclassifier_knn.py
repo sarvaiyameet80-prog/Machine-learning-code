@@ -24,10 +24,9 @@ df['Job_offered'] = le.fit_transform(df['Job_offered'])
 print("\nEncoded Dataset:")
 print(df.head())
 
-#All Columns Except Last
 X=df.iloc[:,:-1]
 
-#LAST Column
+
 Y=df.iloc[:,-1]
 
 X_train,X_test,y_train,y_test=train_test_split(X,Y,test_size=0.2,random_state=0)
@@ -42,17 +41,17 @@ for k in range(1, max_k + 1):
 
     classifier = KNeighborsClassifier(n_neighbors=k)
 
-    # Train model
+    
     classifier.fit(X_train, y_train)
 
-    # Prediction
+    
     y_pred = classifier.predict(X_test)
 
-    # Confusion Matrix
+    
     cm = confusion_matrix(y_test, y_pred)
     print("Confusion Matrix:")
     print(cm)
 
-    # Accuracy
+    
     acc = accuracy_score(y_test, y_pred) * 100
     print(f"Accuracy = {acc:.2f}%")
