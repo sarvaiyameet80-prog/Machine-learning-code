@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,confusion_matrix
 from sklearn.preprocessing import LabelEncoder
 
-df = pd.read_csv('D:\Hardik\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\knn_dataset.csv')
+df = pd.read_csv('D:\meet\Machine-learning-programs-main\Machine-learning-programs-main\Datasets\knn_dataset.csv')
 
 print("Dataset Preview:")
 print(df.head())
