@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
-df = pd.read_csv(r"D:\Hardik\auto-mpg.csv")
+df = pd.read_csv(r"D:\meet\auto-mpg.csv")
 
 
 df.replace("?", np.nan, inplace=True)
